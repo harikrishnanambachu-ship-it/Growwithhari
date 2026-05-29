@@ -1,0 +1,981 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grow With Hari – Startup Fundraising & Strategy Consultant</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --green: #1D9E75;
+    --green-dark: #0F6E56;
+    --green-light: #E1F5EE;
+    --green-mid: #5DCAA5;
+    --black: #0f0f0f;
+    --white: #fafaf8;
+    --gray: #6b6b6b;
+    --gray-light: #f4f3f0;
+    --border: #e0ddd8;
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: var(--white);
+    color: var(--black);
+    font-size: 16px;
+    line-height: 1.7;
+    overflow-x: hidden;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.2rem 3rem;
+    background: rgba(250,250,248,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--black);
+    text-decoration: none;
+  }
+
+  .nav-logo span { color: var(--green); }
+
+  .nav-links {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: var(--gray);
+    font-size: 0.9rem;
+    font-weight: 400;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--green); }
+
+  .nav-cta {
+    background: var(--green);
+    color: white !important;
+    padding: 0.5rem 1.25rem;
+    border-radius: 100px;
+    font-weight: 500 !important;
+    font-size: 0.85rem !important;
+    transition: background 0.2s !important;
+  }
+
+  .nav-cta:hover { background: var(--green-dark) !important; }
+
+  /* HERO */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: 8rem 3rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-bg {
+    position: absolute;
+    top: 0; right: 0;
+    width: 55%;
+    height: 100%;
+    background: var(--green-light);
+    clip-path: polygon(15% 0%, 100% 0%, 100% 100%, 0% 100%);
+    z-index: 0;
+  }
+
+  .hero-dots {
+    position: absolute;
+    top: 6rem; right: 4rem;
+    width: 200px; height: 200px;
+    background-image: radial-gradient(circle, var(--green-mid) 1.5px, transparent 1.5px);
+    background-size: 20px 20px;
+    opacity: 0.3;
+    z-index: 1;
+  }
+
+  .hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 600px;
+  }
+
+  .hero-tag {
+    display: inline-block;
+    background: var(--green-light);
+    color: var(--green-dark);
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.4rem 1rem;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+    border: 1px solid var(--green-mid);
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(2.4rem, 4.5vw, 3.8rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--black);
+    margin-bottom: 1.5rem;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--green);
+  }
+
+  .hero p {
+    font-size: 1.05rem;
+    color: var(--gray);
+    max-width: 480px;
+    margin-bottom: 2.5rem;
+    font-weight: 300;
+    line-height: 1.8;
+  }
+
+  .hero-btns {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  .btn-primary {
+    background: var(--green);
+    color: white;
+    padding: 0.85rem 2rem;
+    border-radius: 100px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.2s;
+    border: 2px solid var(--green);
+  }
+
+  .btn-primary:hover {
+    background: var(--green-dark);
+    border-color: var(--green-dark);
+    transform: translateY(-1px);
+  }
+
+  .btn-secondary {
+    background: transparent;
+    color: var(--green);
+    padding: 0.85rem 2rem;
+    border-radius: 100px;
+    font-weight: 500;
+    font-size: 0.95rem;
+    text-decoration: none;
+    border: 2px solid var(--green);
+    transition: all 0.2s;
+  }
+
+  .btn-secondary:hover {
+    background: var(--green-light);
+    transform: translateY(-1px);
+  }
+
+  .hero-stats {
+    display: flex;
+    gap: 2.5rem;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .hero-stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--green);
+  }
+
+  .hero-stat-label {
+    font-size: 0.8rem;
+    color: var(--gray);
+    font-weight: 400;
+  }
+
+  /* SECTION SHARED */
+  section { padding: 5rem 3rem; }
+
+  .section-tag {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--green);
+    margin-bottom: 0.75rem;
+  }
+
+  .section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    font-weight: 700;
+    line-height: 1.2;
+    color: var(--black);
+    margin-bottom: 1rem;
+  }
+
+  .section-sub {
+    color: var(--gray);
+    font-size: 1rem;
+    max-width: 520px;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    line-height: 1.8;
+  }
+
+  /* SERVICES */
+  .services { background: var(--gray-light); }
+
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+  }
+
+  .service-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.25s;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .service-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--green);
+    opacity: 0;
+    transition: opacity 0.25s;
+  }
+
+  .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(29,158,117,0.1);
+    border-color: var(--green-mid);
+  }
+
+  .service-card:hover::before { opacity: 1; }
+
+  .service-week {
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: var(--green);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+  }
+
+  .service-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 0.75rem;
+  }
+
+  .service-card p {
+    font-size: 0.88rem;
+    color: var(--gray);
+    line-height: 1.7;
+  }
+
+  .service-deliverables {
+    margin-top: 1rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+  }
+
+  .deliverable-tag {
+    font-size: 0.72rem;
+    background: var(--green-light);
+    color: var(--green-dark);
+    padding: 0.25rem 0.6rem;
+    border-radius: 100px;
+    font-weight: 500;
+  }
+
+  /* PROCESS */
+  .process-steps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 0;
+    margin-top: 3rem;
+    position: relative;
+  }
+
+  .process-steps::before {
+    content: '';
+    position: absolute;
+    top: 2rem;
+    left: 10%;
+    right: 10%;
+    height: 1px;
+    background: var(--border);
+    z-index: 0;
+  }
+
+  .process-step {
+    text-align: center;
+    padding: 0 1.5rem;
+    position: relative;
+    z-index: 1;
+  }
+
+  .step-num {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: var(--green);
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.25rem;
+    position: relative;
+  }
+
+  .process-step h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--black);
+    margin-bottom: 0.5rem;
+  }
+
+  .process-step p {
+    font-size: 0.85rem;
+    color: var(--gray);
+    line-height: 1.6;
+  }
+
+  /* FREE CONSULTATION */
+  .free-consult {
+    background: var(--green);
+    color: white;
+    text-align: center;
+    padding: 5rem 3rem;
+  }
+
+  .free-consult .section-title { color: white; }
+
+  .free-consult p {
+    color: rgba(255,255,255,0.85);
+    font-size: 1rem;
+    max-width: 500px;
+    margin: 0 auto 2rem;
+    font-weight: 300;
+    line-height: 1.8;
+  }
+
+  .free-tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.2);
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 500;
+    padding: 0.4rem 1rem;
+    border-radius: 100px;
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+    border: 1px solid rgba(255,255,255,0.3);
+  }
+
+  .consult-features {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2.5rem;
+    flex-wrap: wrap;
+  }
+
+  .consult-feature {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: rgba(255,255,255,0.9);
+    font-size: 0.9rem;
+  }
+
+  .consult-feature::before {
+    content: '✓';
+    width: 20px;
+    height: 20px;
+    background: rgba(255,255,255,0.25);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .btn-white {
+    background: white;
+    color: var(--green);
+    padding: 0.85rem 2.5rem;
+    border-radius: 100px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: all 0.2s;
+    display: inline-block;
+  }
+
+  .btn-white:hover {
+    background: var(--green-light);
+    transform: translateY(-2px);
+  }
+
+  /* ABOUT */
+  .about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+    padding: 5rem 3rem;
+  }
+
+  .about-visual {
+    position: relative;
+  }
+
+  .about-avatar {
+    width: 280px;
+    height: 280px;
+    border-radius: 24px;
+    background: var(--green-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    font-weight: 700;
+    color: var(--green);
+    border: 2px solid var(--green-mid);
+    position: relative;
+  }
+
+  .about-badge {
+    position: absolute;
+    bottom: -1rem;
+    right: -1rem;
+    background: var(--green);
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    line-height: 1.4;
+  }
+
+  .about-content .section-sub { margin-bottom: 1.5rem; }
+
+  .about-highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 2rem;
+  }
+
+  .highlight {
+    background: var(--gray-light);
+    border-radius: 12px;
+    padding: 1rem;
+    border: 1px solid var(--border);
+  }
+
+  .highlight-icon {
+    font-size: 1.25rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .highlight h4 {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--black);
+    margin-bottom: 0.2rem;
+  }
+
+  .highlight p {
+    font-size: 0.78rem;
+    color: var(--gray);
+  }
+
+  /* PRICING */
+  .pricing { background: var(--gray-light); }
+
+  .pricing-card {
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  .pricing-header {
+    background: var(--green);
+    color: white;
+    padding: 2rem 2.5rem;
+    text-align: center;
+  }
+
+  .pricing-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .pricing-amount {
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+    font-weight: 700;
+  }
+
+  .pricing-amount span {
+    font-size: 1rem;
+    font-weight: 400;
+    opacity: 0.8;
+  }
+
+  .pricing-body { padding: 2rem 2.5rem; }
+
+  .pricing-week {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.85rem 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 0.9rem;
+  }
+
+  .pricing-week:last-child { border-bottom: none; }
+
+  .pricing-week-label { color: var(--black); font-weight: 500; }
+  .pricing-week-amount { color: var(--green); font-weight: 600; }
+
+  /* CONTACT */
+  .contact { padding: 5rem 3rem; }
+
+  .contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+  }
+
+  .contact-info-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.25rem;
+    background: var(--gray-light);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border);
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.2s;
+  }
+
+  .contact-info-item:hover {
+    border-color: var(--green-mid);
+    background: var(--green-light);
+  }
+
+  .contact-icon {
+    width: 44px;
+    height: 44px;
+    background: var(--green);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+  }
+
+  .contact-label {
+    font-size: 0.75rem;
+    color: var(--gray);
+    font-weight: 400;
+    margin-bottom: 0.15rem;
+  }
+
+  .contact-value {
+    font-size: 0.9rem;
+    color: var(--black);
+    font-weight: 500;
+  }
+
+  /* FOOTER */
+  footer {
+    background: var(--black);
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 2rem 3rem;
+    font-size: 0.85rem;
+  }
+
+  footer strong { color: white; }
+  footer a { color: var(--green-mid); text-decoration: none; }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .hero-content > * {
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards;
+  }
+
+  .hero-content > *:nth-child(1) { animation-delay: 0.1s; }
+  .hero-content > *:nth-child(2) { animation-delay: 0.25s; }
+  .hero-content > *:nth-child(3) { animation-delay: 0.4s; }
+  .hero-content > *:nth-child(4) { animation-delay: 0.55s; }
+  .hero-content > *:nth-child(5) { animation-delay: 0.7s; }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    nav { padding: 1rem 1.5rem; }
+    .nav-links { display: none; }
+    .hero { padding: 7rem 1.5rem 3rem; }
+    .hero-bg { width: 100%; clip-path: none; opacity: 0.4; }
+    section { padding: 3.5rem 1.5rem; }
+    .about { grid-template-columns: 1fr; gap: 2.5rem; }
+    .contact-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .process-steps::before { display: none; }
+    .hero-stats { gap: 1.5rem; }
+    .about-highlights { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-logo">Grow With <span>Hari</span></a>
+  <ul class="nav-links">
+    <li><a href="#services">Services</a></li>
+    <li><a href="#process">Process</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="https://wa.me/917592830276" target="_blank" class="nav-cta">Book Free Call</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-dots"></div>
+  <div class="hero-content">
+    <div class="hero-tag">🌱 Kerala's Startup Strategy Consultant</div>
+    <h1>Helping Startups <em>Raise Funds</em> & Grow Faster</h1>
+    <p>I help early-stage startups build investor-ready pitch decks, financial models, GTM strategies, and complete fundraising documentation — so you can focus on building your dream.</p>
+    <div class="hero-btns">
+      <a href="https://wa.me/917592830276" target="_blank" class="btn-primary">Book Free 1-Hour Consultation</a>
+      <a href="#services" class="btn-secondary">See What I Do</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="hero-stat-num">5</div>
+        <div class="hero-stat-label">Weeks to investor-ready</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">Free</div>
+        <div class="hero-stat-label">First consultation</div>
+      </div>
+      <div>
+        <div class="hero-stat-num">100%</div>
+        <div class="hero-stat-label">Founder-focused</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="services" id="services">
+  <div class="section-tag">What I Do</div>
+  <h2 class="section-title">Complete Fundraising Support<br>in 5 Structured Weeks</h2>
+  <p class="section-sub">Everything your startup needs to walk into an investor meeting with full confidence — built week by week.</p>
+  <div class="services-grid">
+    <div class="service-card">
+      <div class="service-week">Week 1</div>
+      <h3>Strategic Foundation & Planning</h3>
+      <p>Vision alignment, SWOT analysis, GTM strategy, technical SRS, and product growth documentation — the complete strategic base for your startup.</p>
+      <div class="service-deliverables">
+        <span class="deliverable-tag">SWOT Analysis</span>
+        <span class="deliverable-tag">GTM Strategy</span>
+        <span class="deliverable-tag">SRS Document</span>
+        <span class="deliverable-tag">Vision Document</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-week">Week 2</div>
+      <h3>Current Financial Analysis</h3>
+      <p>Investor-ready current financials, burn rate analysis, runway calculations, and fund requirement documentation — your financial story told clearly.</p>
+      <div class="service-deliverables">
+        <span class="deliverable-tag">Burn Rate</span>
+        <span class="deliverable-tag">P&L Statement</span>
+        <span class="deliverable-tag">Fund Requirement</span>
+        <span class="deliverable-tag">Value Report</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-week">Week 3</div>
+      <h3>10-Year Financial Projections</h3>
+      <p>Complete financial modeling including 10-year P&L, balance sheets, cash flows, valuation models, cap table, and equity dilution analysis.</p>
+      <div class="service-deliverables">
+        <span class="deliverable-tag">10-Year Model</span>
+        <span class="deliverable-tag">Valuation</span>
+        <span class="deliverable-tag">Cap Table</span>
+        <span class="deliverable-tag">Cash Flow</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-week">Week 4</div>
+      <h3>Investor Pitch Deck Creation</h3>
+      <p>A professional 20-25 slide investor pitch deck integrating all your strategy, financials, and KPI framework — designed to impress.</p>
+      <div class="service-deliverables">
+        <span class="deliverable-tag">Pitch Deck</span>
+        <span class="deliverable-tag">KPI Framework</span>
+        <span class="deliverable-tag">Executive Summary</span>
+      </div>
+    </div>
+    <div class="service-card">
+      <div class="service-week">Week 5</div>
+      <h3>Legal Documentation & Closing</h3>
+      <p>Investor term sheets, NDAs, teaser deck, data room checklist, and due diligence preparation — everything to close the deal.</p>
+      <div class="service-deliverables">
+        <span class="deliverable-tag">Term Sheet</span>
+        <span class="deliverable-tag">NDA Templates</span>
+        <span class="deliverable-tag">Due Diligence</span>
+        <span class="deliverable-tag">Data Room</span>
+      </div>
+    </div>
+    <div class="service-card" style="background: var(--green-light); border-color: var(--green-mid);">
+      <div class="service-week">Always Free</div>
+      <h3>1-Hour Discovery Consultation</h3>
+      <p>Before we start, let's talk. I'll review your startup, understand your funding goals, and give you a clear roadmap — completely free, no strings attached.</p>
+      <div style="margin-top: 1.5rem;">
+        <a href="https://wa.me/917592830276" target="_blank" class="btn-primary" style="font-size: 0.85rem; padding: 0.65rem 1.5rem;">WhatsApp to Book →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="section-tag">How It Works</div>
+  <h2 class="section-title">Simple, Transparent Process</h2>
+  <p class="section-sub">From first call to investor-ready — here's exactly how we work together.</p>
+  <div class="process-steps">
+    <div class="process-step">
+      <div class="step-num">1</div>
+      <h3>Free Consultation</h3>
+      <p>We meet on Google Meet. I understand your startup and funding goals.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">2</div>
+      <h3>Proposal & MOU</h3>
+      <p>I share a clear scope, timeline, and MOU — transparent from day one.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">3</div>
+      <h3>Weekly Delivery</h3>
+      <p>Documents delivered every week. You review, approve, and we move forward.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">4</div>
+      <h3>Investor Ready</h3>
+      <p>In 5 weeks, you have everything needed to approach investors confidently.</p>
+    </div>
+  </div>
+</section>
+
+<!-- FREE CONSULT CTA -->
+<section class="free-consult">
+  <div class="free-tag">Zero Cost · Zero Commitment</div>
+  <h2 class="section-title">Not Sure Where to Start?<br>Let's Talk First.</h2>
+  <p>Book a free 1-hour consultation on Google Meet. We'll discuss your startup, your funding stage, and I'll give you a clear action plan — completely free.</p>
+  <div class="consult-features">
+    <div class="consult-feature">No payment required</div>
+    <div class="consult-feature">Google Meet call</div>
+    <div class="consult-feature">Clear action plan</div>
+    <div class="consult-feature">Kerala & all India</div>
+  </div>
+  <a href="https://wa.me/917592830276" target="_blank" class="btn-white">WhatsApp Hari to Book Free Call</a>
+</section>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-visual">
+    <div class="about-avatar">
+      HK
+      <div class="about-badge">Co-Founder, BrainCode<br>Strategy Consultant</div>
+    </div>
+  </div>
+  <div class="about-content">
+    <div class="section-tag">About Hari</div>
+    <h2 class="section-title">Harikrishnan Kalarikkal Joshi</h2>
+    <p class="section-sub">I'm a Kerala-based business strategy consultant and co-founder of BrainCode. I help startups turn their ideas into investor-ready businesses through structured documentation, financial modeling, and fundraising strategy.</p>
+    <p style="color: var(--gray); font-size: 0.9rem; font-weight: 300; line-height: 1.8; margin-bottom: 2rem;">Having built BrainCode from the ground up — including vision documents, GTM strategy, financial projections, and pitch materials — I know exactly what investors look for and how to present your startup in the best possible light.</p>
+    <div class="about-highlights">
+      <div class="highlight">
+        <div class="highlight-icon">📊</div>
+        <h4>Financial Modeling</h4>
+        <p>10-year projections & valuations</p>
+      </div>
+      <div class="highlight">
+        <div class="highlight-icon">🎯</div>
+        <h4>Pitch Strategy</h4>
+        <p>Investor-ready decks & materials</p>
+      </div>
+      <div class="highlight">
+        <div class="highlight-icon">🗺️</div>
+        <h4>GTM Planning</h4>
+        <p>Go-to-market strategy & execution</p>
+      </div>
+      <div class="highlight">
+        <div class="highlight-icon">📋</div>
+        <h4>Legal Documentation</h4>
+        <p>MOUs, NDAs & term sheets</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <div style="text-align: center; margin-bottom: 3rem;">
+    <div class="section-tag">Transparent Pricing</div>
+    <h2 class="section-title">Clear, Milestone-Based Fees</h2>
+    <p class="section-sub" style="margin: 0 auto;">Pay only when you're satisfied with each week's deliverables. No surprises.</p>
+  </div>
+  <div class="pricing-card">
+    <div class="pricing-header">
+      <h3>Complete 5-Week Fundraising Package</h3>
+      <div class="pricing-amount">₹50,000 <span>total</span></div>
+      <p style="font-size: 0.85rem; opacity: 0.8; margin-top: 0.5rem;">₹10,000 per week · Pay as you go</p>
+    </div>
+    <div class="pricing-body">
+      <div class="pricing-week">
+        <span class="pricing-week-label">Week 1 — Strategic Foundation</span>
+        <span class="pricing-week-amount">₹10,000</span>
+      </div>
+      <div class="pricing-week">
+        <span class="pricing-week-label">Week 2 — Financial Analysis</span>
+        <span class="pricing-week-amount">₹10,000</span>
+      </div>
+      <div class="pricing-week">
+        <span class="pricing-week-label">Week 3 — Financial Projections</span>
+        <span class="pricing-week-amount">₹10,000</span>
+      </div>
+      <div class="pricing-week">
+        <span class="pricing-week-label">Week 4 — Pitch Deck Creation</span>
+        <span class="pricing-week-amount">₹10,000</span>
+      </div>
+      <div class="pricing-week">
+        <span class="pricing-week-label">Week 5 — Legal Documentation</span>
+        <span class="pricing-week-amount">₹10,000</span>
+      </div>
+      <div style="margin-top: 1.5rem; background: var(--green-light); border-radius: 12px; padding: 1rem 1.25rem; font-size: 0.85rem; color: var(--green-dark);">
+        ✓ Each week: ₹5,000 before + ₹5,000 after your approval<br>
+        ✓ Up to 2 rounds of revisions included per week<br>
+        ✓ Full MOU signed before we begin
+      </div>
+      <div style="margin-top: 1.5rem; text-align: center;">
+        <a href="https://wa.me/917592830276" target="_blank" class="btn-primary">Start with Free Consultation</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-grid">
+    <div>
+      <div class="section-tag">Get In Touch</div>
+      <h2 class="section-title">Let's Talk About Your Startup</h2>
+      <p class="section-sub">Reach out on WhatsApp for the fastest response. I'm based in Kerala and work with startups across all of India.</p>
+    </div>
+    <div>
+      <a href="https://wa.me/917592830276" target="_blank" class="contact-info-item">
+        <div class="contact-icon">💬</div>
+        <div>
+          <div class="contact-label">WhatsApp (Fastest)</div>
+          <div class="contact-value">+91 75928 30276</div>
+        </div>
+      </a>
+      <a href="mailto:harikrishnanambachu@gmail.com" class="contact-info-item">
+        <div class="contact-icon">📧</div>
+        <div>
+          <div class="contact-label">Email</div>
+          <div class="contact-value">harikrishnanambachu@gmail.com</div>
+        </div>
+      </a>
+      <a href="https://braincodeedu.com" target="_blank" class="contact-info-item">
+        <div class="contact-icon">🌐</div>
+        <div>
+          <div class="contact-label">Also Co-Founder of</div>
+          <div class="contact-value">BrainCode — braincodeedu.com</div>
+        </div>
+      </a>
+      <div class="contact-info-item" style="cursor: default;">
+        <div class="contact-icon">📍</div>
+        <div>
+          <div class="contact-label">Location</div>
+          <div class="contact-value">Kerala, India · Serving All of India</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p><strong>Grow With Hari</strong> · Strategic Fundraising & Business Consulting</p>
+  <p style="margin-top: 0.5rem;">By <strong>Harikrishnan Kalarikkal Joshi</strong> · <a href="mailto:harikrishnanambachu@gmail.com">harikrishnanambachu@gmail.com</a> · <a href="https://wa.me/917592830276">+91 75928 30276</a></p>
+  <p style="margin-top: 0.5rem; font-size: 0.78rem;">© 2026 Grow With Hari. All rights reserved.</p>
+</footer>
+
+</body>
+</html>
