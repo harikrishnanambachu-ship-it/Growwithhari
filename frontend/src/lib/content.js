@@ -57,10 +57,10 @@ export const FOUNDER_POINTS = [
 ];
 
 export const TEAM = [
-  { name: "Harikrishnan Kalarikkal Joshi", role: "Founder and Business Growth Consultant", initials: "HK" },
-  { name: "Shaikha Majeed", role: "Head of Client Relations", initials: "SM" },
-  { name: "Dhishanka", role: "Head of Process Strategy", initials: "DH" },
-  { name: "Abhinav N", role: "Lead, Technology and Automation Strategy", initials: "AN" },
+  { name: "Harikrishnan Kalarikkal Joshi", role: "Founder and Business Growth Consultant", img: "/img/hari1.jpg" },
+  { name: "Shaikha Majeed", role: "Head of Client Relations", img: "/img/shaikha.jpg" },
+  { name: "Dhishanka", role: "Head of Process Strategy", img: "/img/dhishanka.jpg" },
+  { name: "Abhinav N", role: "Lead, Technology and Automation Strategy", img: "/img/abhinav.jpg" },
 ];
 
 export const STRATEGIES = [

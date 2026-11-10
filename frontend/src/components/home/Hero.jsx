@@ -54,7 +54,7 @@ export const Hero = () => {
             animate={{ clipPath: "inset(0% 0% 0% 0% round 999px 999px 32px 32px)" }}
             transition={{ duration: 1.6, ease: [0.76, 0, 0.24, 1], delay: d + 0.2 }}
             className="relative mx-auto aspect-[4/5] w-full max-w-[300px] sm:max-w-[380px] overflow-hidden rounded-t-[999px] rounded-b-[2rem] border border-mint/30 shadow-[0_40px_120px_-40px_rgba(16,185,129,0.55)]">
-            <motion.img src="/img/fern.jpg" alt="Fern leaf unfurling in the dark" style={{ y: imgY, scale: 1.15 }} className="absolute inset-0 h-full w-full object-cover object-[85%_90%]" />
+            <motion.img src="/img/hari2.jpg" alt="Harikrishnan Kalarikkal Joshi, founder of Grow With Hari" style={{ y: imgY, scale: 1.12 }} className="absolute inset-0 h-full w-full object-cover object-[center_20%]" />
             <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/10 to-transparent" />
             <div className="absolute inset-x-0 bottom-0 p-6" style={{ transform: "translateZ(60px)" }}>
               <p className="font-display text-xl sm:text-2xl font-light italic leading-snug text-bone">"Passion starts the journey. Financial stability and strong systems sustain it."</p>

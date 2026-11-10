@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { ArrowUpRight } from "lucide-react";
 import { Hero } from "@/components/home/Hero";
-import { ScrollQuote, WhoWeHelp, WhyUs, TracksPreview } from "@/components/home/Sections";
+import { ScrollQuote, WhoWeHelp, WhyUs, TracksPreview, MeetHari } from "@/components/home/Sections";
 import { Marquee } from "@/components/site/Marquee";
 import { Section } from "@/components/site/PageBits";
 import { Reveal, SectionHead } from "@/components/site/Reveal";
@@ -44,6 +44,7 @@ export default function Home() {
       <Marquee />
       <ScrollQuote />
       <WhoWeHelp />
+      <MeetHari />
       <WhyUs />
       <ParallaxBand />
       <TracksPreview />

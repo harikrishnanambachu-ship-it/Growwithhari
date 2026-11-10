@@ -87,6 +87,33 @@ export const WhyUs = () => (
   </Section>
 );
 
+export const MeetHari = () => (
+  <Section testid="home-founder">
+    <div className="grid gap-12 lg:grid-cols-12 lg:items-center">
+      <motion.div className="lg:col-span-5" initial="hidden" whileInView="show" viewport={{ once: true, amount: 0.15 }}>
+        <motion.div
+          variants={{ hidden: { clipPath: "inset(0% 0% 100% 0% round 32px)" }, show: { clipPath: "inset(0% 0% 0% 0% round 32px)" } }}
+          transition={{ duration: 1.3, ease: [0.76, 0, 0.24, 1] }}
+          className="group relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-line"
+        >
+          <img src="/img/hari1.jpg" alt="Harikrishnan Kalarikkal Joshi" className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-[1400ms] group-hover:scale-105" />
+          <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent" />
+          <p className="absolute bottom-6 left-6 font-mono text-xs uppercase tracking-[0.25em] text-mint">Founder · Grow With Hari</p>
+        </motion.div>
+      </motion.div>
+      <div className="lg:col-span-7">
+        <SectionHead eyebrow="Meet the founder" lines={["Harikrishnan", <em key="h" className="italic text-mint">Kalarikkal Joshi.</em>]}
+          text="A Kerala-based serial entrepreneur and business growth consultant who has built, funded and exited ventures of his own, including BrainCode and KiddieBite, and author of The Brain Code Framework." />
+        <Reveal delay={0.2} className="mt-8">
+          <Link to="/about" data-testid="home-founder-more" className="group inline-flex items-center gap-2 text-sm text-mint hover:text-bone">
+            Read Hari's story <ArrowUpRight className="h-4 w-4 transition-transform group-hover:rotate-45" />
+          </Link>
+        </Reveal>
+      </div>
+    </div>
+  </Section>
+);
+
 export const TracksPreview = () => (
   <Section testid="home-tracks">
     <div className="flex flex-col justify-between gap-8 md:flex-row md:items-end">

@@ -9,9 +9,10 @@ const TeamCard = ({ m, i }) => (
   <Reveal delay={i * 0.1}>
     <motion.div whileHover={{ y: -8 }} transition={{ type: "spring", stiffness: 260, damping: 20 }} data-testid={`team-card-${i}`}
       className="group relative overflow-hidden rounded-[1.75rem] border border-line bg-panel/60 p-6">
-      <div className="relative grid aspect-square place-items-center overflow-hidden rounded-[1.25rem] bg-gradient-to-br from-forest/60 to-ink">
-        <svg viewBox="0 0 100 100" className="absolute inset-0 h-full w-full spin-slower opacity-40"><circle cx="50" cy="50" r="40" fill="none" stroke="#78C8A0" strokeWidth="0.3" strokeDasharray="1 2" /></svg>
-        <span className="font-display text-6xl font-light text-bone transition-transform duration-700 group-hover:scale-110">{m.initials}</span>
+      <div className="relative aspect-[4/5] overflow-hidden rounded-[1.25rem] bg-forest/40">
+        <img src={m.img} alt={m.name} className="absolute inset-0 h-full w-full object-cover object-top grayscale-[0.35] transition-[filter,transform] duration-700 group-hover:scale-105 group-hover:grayscale-0" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink/70 via-transparent to-transparent opacity-80 transition-opacity duration-500 group-hover:opacity-40" />
+        <span className="absolute bottom-3 right-3 h-2 w-2 rounded-full bg-mint shadow-[0_0_12px_#10B981]" />
       </div>
       <p className="mt-5 font-display text-xl text-bone">{m.name}</p>
       <p className="mt-1 text-sm text-sage">{m.role}</p>
@@ -22,7 +23,7 @@ const TeamCard = ({ m, i }) => (
 export default function About() {
   return (
     <>
-      <PageHero testid="about-hero" eyebrow="About Grow With Hari" img="/img/meeting1.jpg"
+      <PageHero testid="about-hero" eyebrow="About Grow With Hari" img="/img/hari1.jpg"
         lines={["Strategy, systems", <em key="a" className="italic text-mint">and automation</em>, "for growing businesses."]}
         text="Grow With Hari is a business growth consulting and AI automation firm based in Kerala, India. We work with founders and business owners to turn scattered effort into a clear growth plan, efficient operations and automated customer journeys." />
 
@@ -31,7 +32,7 @@ export default function About() {
           <div className="lg:col-span-5">
             <Reveal>
               <div className="group relative aspect-[4/5] overflow-hidden rounded-[2rem] border border-line">
-                <img src="/img/leaves.jpg" alt="" className="img-tone absolute inset-0 h-full w-full object-cover" />
+                <img src="/img/hari2.jpg" alt="Harikrishnan Kalarikkal Joshi, founder of Grow With Hari" className="absolute inset-0 h-full w-full object-cover object-top transition-transform duration-[1400ms] group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-ink via-ink/40 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-7">
                   <p className="font-mono text-xs uppercase tracking-[0.25em] text-mint">Founder</p>

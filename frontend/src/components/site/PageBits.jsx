@@ -29,7 +29,7 @@ export const PageHero = ({ eyebrow, lines, text, img, testid }) => {
             animate={{ clipPath: "inset(0% 0 0 0)" }}
             transition={{ duration: 1.4, ease: [0.76, 0, 0.24, 1], delay: d + 0.2 }}
           >
-            <motion.img src={img} alt="" style={{ y }} className="img-tone absolute inset-0 h-[120%] w-full object-cover" />
+            <motion.img src={img} alt="" style={{ y }} className="img-tone absolute inset-0 h-[120%] w-full object-cover object-[center_15%]" />
             <div className="absolute inset-0 bg-gradient-to-t from-ink/80 via-transparent to-transparent" />
           </motion.div>
         )}
