@@ -1,0 +1,120 @@
+{
+  "project_info": {
+    "brand_name": "Grow With Hari (GWH Consulting)",
+    "tagline": "Architecting High-Growth Ecosystems & Intelligent AI/WhatsApp Automation for Kerala Enterprise",
+    "founder": "Harikrishnan Kalarikkal Joshi",
+    "location": "Kochi, Kerala, India",
+    "app_type": "Marketing & Personal Consulting Platform (Multi-page Interactive Experience)",
+    "theme_preference": "Dark Emerald Void (Near-black #070B08 with Deep Forest #0F1E16, Emerald #10B981 & Mint Leaf #78C8A0 highlights)",
+    "animation_level": "Maximum Animated (Awwwards-level kinetic reveals, Lenis smooth scroll, interactive 3D/Canvas node network, tracing beam borders, 2D/3D SVG diagrams)"
+  },
+  "logo_specification": {
+    "vector_representation": "Custom SVG Logo Component with serif GWH font, deep forest green (#1A3A2A) and light mint/sage leaf curve sweeping dynamically through the letter W, with CONSULTING in tracking-[0.3em] sans caps below",
+    "dark_mode_adaptation": "Gradient leaf stroke (#78C8A0 to #10B981) with crisp off-white serif monogram and emerald glow accent"
+  },
+  "typography": {
+    "headline_font": "Cabinet Grotesk / Outfit / Playfair Display (Serif accent for GWH luxury touch)",
+    "body_font": "Plus Jakarta Sans / Inter",
+    "mono_font": "JetBrains Mono (for code, automation metrics & ROI figures)",
+    "rules": {
+      "anti_default": "Never use pure default Inter for headings. Use Cabinet Grotesk or Playfair Display serif for editorial punch.",
+      "hero_h1": "text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-[1.1]",
+      "section_h2": "text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight text-emerald-50",
+      "card_h3": "text-lg sm:text-xl font-semibold text-emerald-100",
+      "overlines": "uppercase tracking-[0.25em] text-xs font-mono text-emerald-400 font-semibold"
+    }
+  },
+  "color_palette": {
+    "archetype": "ARCHETYPE 1 + ARCHETYPE 5: Organic Dark Emerald Void (Luxury & High Precision)",
+    "background_dark": "#070B08",
+    "surface_dark": "#0D1410",
+    "surface_card": "#121C16",
+    "surface_card_border": "rgba(120, 200, 160, 0.15)",
+    "primary_forest": "#1F5A3D",
+    "mint_accent": "#78C8A0",
+    "emerald_glow": "#10B981",
+    "text_primary": "#F1F7F3",
+    "text_secondary": "#94A3B8",
+    "text_muted": "#64748B",
+    "gradient_hero": "linear-gradient(135deg, rgba(16,185,129,0.15) 0%, rgba(120,200,160,0.05) 50%, transparent 100%)",
+    "gradient_tracing_beam": "linear-gradient(90deg, transparent, #78C8A0, #10B981, transparent)"
+  },
+  "spacing_and_layout": {
+    "spacing_scale": "Generous (p-6, p-8, p-12, p-16, p-24, p-32)",
+    "grid_modes": {
+      "hero": "Asymmetric Bento Grid (col-span-12 with 8-span visual hero + 4-span stats tall card)",
+      "services": "2-Column and 3-Track Bento Cards with interactive 4-step swimlanes",
+      "automation": "Full-bleed interactive SVG flowchart card with zoom/pan simulation & node highlight",
+      "methodology": "Interactive 5-step timeline tabbed view with 2x2 quadrant positioning matrix"
+    }
+  },
+  "required_animations_and_libraries": {
+    "smooth_scrolling": "@studio-freight/lenis or custom rAF Lenis engine",
+    "motion": "framer-motion for page transitions, line-by-line text masking, scroll reveals, modal popups",
+    "canvas_3d": "HTML5 Canvas particle node network (or Three.js/R3F floating ambient constellation) in Hero section representing connected WhatsApp AI nodes & growth channels",
+    "micro_interactions": "Magnetic buttons, glowing border hover effects, tab transitions, interactive ROI slider updates"
+  },
+  "interactive_diagrams_manifest": [
+    {
+      "id": "swimlane_charts",
+      "name": "13 Two-Lane 'We Do / You Do' 4-Step Swimlane Charts",
+      "tracks": ["Track 1: Growth Strategy (4 charts)", "Track 2: AI & WhatsApp Automation (5 charts)", "Track 3: Systems & Operations (4 charts)"],
+      "type": "Interactive SVG / Framer Motion split lanes with active step highlights and detail drawers"
+    },
+    {
+      "id": "customer_journey_flowchart",
+      "name": "Customer Journey Flowchart (6 Stages + 1 Decision Node)",
+      "stages": ["1. Ad Lead / QR Code", "2. WhatsApp Opt-in & Greeting", "3. AI Qualifier Bot", "DECISION: High-Intent Lead?", "4A. Instantly Book Harikrishnan's Calendar", "4B. Nurture Drip Sequence", "5. Automated CRM Sync & Invoice", "6. Post-Sale Review Loop"],
+      "type": "Animated SVG Flow Chart with pulsating glowing signal pulses flowing through connectors"
+    },
+    {
+      "id": "tech_advantage_stack",
+      "name": "Technology Advantage Stack & Cost Comparison Matrix",
+      "components": ["Interactive Architectural Stack Diagram (Meta Cloud API, n8n/Make, Custom Vector DB, Kerala CRM)", "Traditional Agency Cost vs GWH Automation ROI Interactive Slider & Table"]
+    },
+    {
+      "id": "process_timeline",
+      "name": "5-Step Transformation Process Timeline",
+      "steps": ["01. Business Audit", "02. Strategy Blueprint", "03. AI Stack Build", "04. Team Training", "05. Scale & Optimize"],
+      "type": "Horizontal scrollable timeline with step indicator and node expansion"
+    },
+    {
+      "id": "client_onboarding_loop",
+      "name": "Client Onboarding 6-Step Closed Loop",
+      "steps": ["Discovery", "Access Setup", "Workflow Mapping", "Sandbox Testing", "Go-Live", "Weekly Sprints"],
+      "type": "Circular SVG loop animation with clickable nodes"
+    },
+    {
+      "id": "process_setting_cycle",
+      "name": "Process-Setting 6-Step Continuous Cycle",
+      "steps": ["Measure", "Standardize", "Automate", "Delegate", "Audit", "Refine"],
+      "type": "Hexagonal rotating cycle diagram"
+    },
+    {
+      "id": "market_funnel_and_matrix",
+      "name": "Market Analysis 5-Lenses Funnel & 2x2 Positioning Map",
+      "components": ["5-Lenses Funnel (Macro, Competitor, Unit Economics, Digital Footprint, Conversion Risk)", "Interactive 2x2 Growth Matrix (Low Automation vs High Automation, Low Strategy vs High Strategy)"]
+    }
+  ],
+  "image_urls": {
+    "founder_portrait": "https://images.unsplash.com/photo-1742235537641-46bb14f6012f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwyfHxtb2Rlcm4lMjB0ZWNoJTIwb2ZmaWNlJTIwa2VyYWxhJTIwZ3Jvd3RoJTIwc3RyYXRlZ3klMjB0ZWFtfGVufDB8fHx8MTc5NDMzMDQxNHww&ixlib=rb-4.1.0&q=85",
+    "kerala_office_workspace": "https://images.unsplash.com/photo-1565255822848-80db21938837?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwzfHxtb2Rlcm4lMjB0ZWNoJTIwb2ZmaWNlJTIwa2VyYWxhJTIwZ3Jvd3RoJTIwc3RyYXRlZ3klMjB0ZWFtfGVufDB8fHx8MTc5NDMzMDQxNHww&ixlib=rb-4.1.0&q=85",
+    "business_analytics_dashboard": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHw0fHxidXNpbmVzcyUyMGFuYWx5dGljcyUyMHN0cmF0ZWd5JTIwd29ya3NwYWNlJTIwdGVjaG5vbG9neXxlbnwwfHx8fDE3OTQzMzA0MjJ8MA&ixlib=rb-4.1.0&q=85",
+    "strategy_laptop_workspace": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDk1Nzl8MHwxfHNlYXJjaHwyfHxidXNpbmVzcyUyMGFuYWx5dGljcyUyMHN0cmF0ZWd5JTIwd29ya3NwYWNlJTIwdGVjaG5vbG9neXxlbnwwfHx8fDE3OTQzMzA0MjJ8MA&ixlib=rb-4.1.0&q=85"
+  },
+  "instructions_to_main_agent": [
+    "1. Structure the multi-page navigation cleanly with top sticky glassmorphism header featuring the GWH logo, page links (Home, Founder & Story, Services, AI & WhatsApp Automation, Frameworks & Diagrams, Industries, FAQ, Contact), and a high-contrast 'Book Strategy Call' CTA button.",
+    "2. Implement Lenis or smooth scroll logic along with Framer Motion for line-by-line text reveals and element fade-ups throughout the pages.",
+    "3. Build an interactive HTML5 Canvas or Three.js node network background in the hero section that reacts subtly to mouse movement, signaling automation nodes.",
+    "4. Ensure all 13 'We Do / You Do' swimlane charts, the 6-stage + decision customer journey flowchart, the 5-step process timeline, 6-step loops, 5-lenses funnel, and 2x2 matrix are rendered as beautiful, animated dark-mode SVG diagrams with interactive tooltips/drawers.",
+    "5. Build an interactive Consulting ROI Calculator where visitors adjust monthly revenue, staff hours, and lead volume to see estimated time/money saved via GWH automation.",
+    "6. Include a functional contact form that stores submissions to localStorage (simulating a private admin inbox drawer accessible via hidden / admin trigger) and provides direct WhatsApp link pre-filled with consulting enquiry.",
+    "7. Attach data-testid attributes on all interactive elements (buttons, nav items, form fields, diagram toggles, sliders, tabs)."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": {
+    "data_testid_rule": "Every button, link, tab, input, dialog, card, and interactive diagram node MUST have a descriptive kebab-case data-testid attribute.",
+    "hover_contrast": "Ensure text remains highly readable on hover. Always explicitly set hover:text-white or hover:text-emerald-300 when background shifts.",
+    "no_transparent_overlays": "Header backdrop filter must use bg-[#070B08]/85 backdrop-blur-md, never 100% pure transparent text floating without scrim.",
+    "component_reuse": "Utilize pre-built shadcn components (Tabs, Accordion, Dialog, Sheet, Select, Input, Button, Card, Badge) in src/components/ui/ customized with dark emerald styling."
+  }
+}
