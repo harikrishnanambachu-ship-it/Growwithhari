@@ -15,11 +15,12 @@ import bcrypt
 import jwt
 from bson import ObjectId
 from bson.errors import InvalidId
-from fastapi import FastAPI, APIRouter, HTTPException, Request, Response, Depends
+from fastapi import FastAPI, APIRouter, HTTPException, Request, Response, Depends, BackgroundTasks
 from motor.motor_asyncio import AsyncIOMotorClient
 from pydantic import BaseModel, Field, ConfigDict, BeforeValidator
 from pymongo import ASCENDING, DESCENDING, IndexModel
 from starlette.middleware.cors import CORSMiddleware
+from email_service import notify_owner_new_message
 
 client = AsyncIOMotorClient(os.environ["MONGO_URL"])
 db = client[os.environ["DB_NAME"]]
@@ -148,11 +149,12 @@ async def root():
 
 
 @api.post("/contact")
-async def create_message(data: MessageIn):
+async def create_message(data: MessageIn, background: BackgroundTasks):
     if data.website:
         return {"ok": True}
     msg = Message(**data.model_dump(exclude={"website"}))
     await db.messages.insert_one(msg.to_mongo())
+    background.add_task(notify_owner_new_message, msg.model_dump(exclude={"id"}))
     return {"ok": True}
 
 

@@ -16,6 +16,8 @@ User choices: contact form saved to private inbox AND show email/phone; near-bla
 - Hari (owner) reading enquiries in the private inbox.
 
 ## Implemented (2026-11-10)
+- Live WhatsApp chat demo (ChatDemo) on Home + Automation: plays a sample conversation when scrolled into view, synced to 7 journey stages, loops, replay button.
+- New enquiry email alerts via Emergent managed email (backend/email_service.py) to OWNER_EMAIL=hello@growwithhari.com, sent in background so form never fails.
 - Glowing step-by-step animation extended to Process timeline, Onboarding + Process-setting cycles (icons, glowing arc, orbiting dot), Market lenses (active path pulse) and Positioning map (auto-tours quadrants). Shared hook: lib/useAutoStep.js.
 - Images switched to AI-generated Indian corporate professionals (no nature scenes); Services swimlane diagrams redesigned (auto-playing steps, icon nodes, glowing progress beam, handoff connectors, step summary bar).
 - All stock photos replaced with AI-generated Kerala-themed images (page heroes, who-we-help cards, tea terraces, backwater band).

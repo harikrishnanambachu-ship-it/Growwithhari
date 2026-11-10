@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { PageHero, Section, Checklist } from "@/components/site/PageBits";
 import { Reveal, SectionHead, Eyebrow } from "@/components/site/Reveal";
 import { JourneyFlow } from "@/components/diagrams/JourneyFlow";
+import { ChatDemo } from "@/components/diagrams/ChatDemo";
 import { StackCompare, CostTable } from "@/components/diagrams/StackCompare";
 import { Marquee } from "@/components/site/Marquee";
 import { STRATEGIES, TOOLS, ROLLOUT } from "@/lib/content";
@@ -27,6 +28,7 @@ export default function Automation() {
         <SectionHead eyebrow="Automated customer journey · 6 stages, 1 decision" lines={["Every enquiry is answered,", <em key="e" className="italic text-mint">tracked and followed up.</em>]}
           text="Leads from ads, Google and the website land in WhatsApp, get an instant AI reply and go into the CRM. Leads not ready to buy get a nurture sequence; ready leads go to your team, and every step feeds one live dashboard." />
         <Reveal className="mt-12"><JourneyFlow /></Reveal>
+        <Reveal className="mt-8"><ChatDemo /></Reveal>
       </Section>
 
       <Section testid="automation-strategies">

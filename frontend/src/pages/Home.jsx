@@ -8,6 +8,7 @@ import { Marquee } from "@/components/site/Marquee";
 import { Section } from "@/components/site/PageBits";
 import { Reveal, SectionHead } from "@/components/site/Reveal";
 import { JourneyFlow } from "@/components/diagrams/JourneyFlow";
+import { ChatDemo } from "@/components/diagrams/ChatDemo";
 import { ProcessTimeline } from "@/components/diagrams/ProcessTimeline";
 
 const ParallaxBand = () => {
@@ -52,6 +53,7 @@ export default function Home() {
         <SectionHead eyebrow="Automation" lines={["Every enquiry answered,", <em key="j" className="italic text-mint">tracked and followed up.</em>]}
           text="Leads from ads, Google and the website land in WhatsApp, get an instant AI reply and go into the CRM. Ready leads go to your team, and every step feeds one live dashboard." />
         <Reveal className="mt-12"><JourneyFlow /></Reveal>
+        <Reveal className="mt-8"><ChatDemo /></Reveal>
         <MoreLink to="/automation" testid="home-journey-more">Explore automation strategies</MoreLink>
       </Section>
       <Marquee reverse testid="marquee-2" items={["Discover", "Plan", "Build", "Launch", "Review & scale"]} />
