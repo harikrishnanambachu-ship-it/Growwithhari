@@ -8,7 +8,7 @@ import { RECEIVE, ONBOARDING, NEEDS, CYCLE } from "@/lib/content";
 export default function Process() {
   return (
     <>
-      <PageHero testid="process-hero" eyebrow="Our process" img="/img/meeting2.jpg"
+      <PageHero testid="process-hero" eyebrow="Our process" img="/img/k-process.jpg"
         lines={["How Grow With Hari", <em key="p" className="italic text-mint">works.</em>]}
         text="Every engagement follows five steps: Discover, Plan, Build, Launch, and Review and Scale. You always know what happens next, who owns it and what you will receive." />
 

@@ -16,6 +16,7 @@ User choices: contact form saved to private inbox AND show email/phone; near-bla
 - Hari (owner) reading enquiries in the private inbox.
 
 ## Implemented (2026-11-10)
+- All stock photos replaced with AI-generated Kerala-themed images (page heroes, who-we-help cards, tea terraces, backwater band).
 - Photos from the content PDF: Hari portraits (home hero arch, new "Meet the founder" home section, About hero + founder card) and team headshots (About team cards).
 - Pages: Home, About, Services, Automation (+ Technology advantage & cost table), Process (+ onboarding + process-setting), Market (+ industries, results), FAQ, Contact, Admin login, Admin inbox.
 - Preloader with drawn SVG logo, masked line hero reveal, mouse-reactive node network canvas, 3D tilt arch image, parallax, slow editorial marquees, scroll-scrubbed quote, magnetic buttons, glow cards, smooth scrolling, scroll progress bar, mobile menu with circular reveal.

@@ -24,7 +24,7 @@ const IndustryRow = ({ row, i }) => {
 export default function Market() {
   return (
     <>
-      <PageHero testid="market-hero" eyebrow="Market analysis" img="/img/kerala2.jpg"
+      <PageHero testid="market-hero" eyebrow="Market analysis" img="/img/k-market.jpg"
         lines={["Market analysis", <em key="m" className="italic text-mint">for Kerala businesses.</em>]}
         text="Every growth plan starts with a market analysis through five lenses: demand, customers, competitors, pricing and channels. Together they show where you can win and turn into a go-to-market plan." />
 

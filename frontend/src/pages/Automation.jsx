@@ -19,7 +19,7 @@ const Strategy = ({ s, i }) => (
 export default function Automation() {
   return (
     <>
-      <PageHero testid="automation-hero" eyebrow="Automation strategies" img="/img/laptop.jpg"
+      <PageHero testid="automation-hero" eyebrow="Automation strategies" img="/img/k-automation.jpg"
         lines={["AI and WhatsApp", <em key="a" className="italic text-mint">automation</em>, "for growing businesses."]}
         text="Business automation means letting software handle repeat work, like answering enquiries, following up leads and sending reminders, so your team spends time on customers, not admin. We design automation around one goal: no lead is missed and no customer is forgotten." />
 

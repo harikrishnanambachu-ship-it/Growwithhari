@@ -18,7 +18,7 @@ const ParallaxBand = () => {
   return (
     <section ref={ref} data-testid="home-band" className="relative px-3 sm:px-6">
       <motion.div style={{ scale }} className="relative mx-auto h-[70vh] max-w-[1500px] overflow-hidden rounded-[2rem] sm:rounded-[3rem]">
-        <motion.img src="/img/kerala1.jpg" alt="Kerala greenery from above" style={{ y }} className="absolute inset-0 h-[130%] w-full object-cover brightness-[0.55] saturate-[0.8]" />
+        <motion.img src="/img/k-band.jpg" alt="Kerala backwaters with a houseboat, from above" style={{ y }} className="absolute inset-0 h-[130%] w-full object-cover brightness-[0.7]" />
         <div className="absolute inset-0 bg-gradient-to-r from-ink/90 via-ink/40 to-transparent" />
         <div className="relative flex h-full flex-col justify-end p-7 sm:p-14">
           <p className="font-mono text-xs uppercase tracking-[0.25em] text-mint">Rooted in Kerala · working across India and the Gulf</p>

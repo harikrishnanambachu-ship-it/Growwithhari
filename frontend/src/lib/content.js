@@ -35,10 +35,10 @@ export const SEO = {
 };
 
 export const WHO = [
-  { title: "Founders and SMEs with traction", text: "Founders and SMEs in Kerala who have traction but feel stuck at the same revenue level.", img: "/img/kerala2.jpg" },
-  { title: "Owners buried in operations", text: "Business owners buried in daily operations, follow-ups and manual work.", img: "/img/laptop.jpg" },
-  { title: "Startups raising capital", text: "Startups preparing to raise funds, apply for grants or approach investors.", img: "/img/meeting2.jpg" },
-  { title: "Service businesses", text: "Clinics, gyms, studios, boutiques and food brands that want more leads and better conversion.", img: "/img/meeting3.jpg" },
+  { title: "Founders and SMEs with traction", text: "Founders and SMEs in Kerala who have traction but feel stuck at the same revenue level.", img: "/img/k-founders.jpg" },
+  { title: "Owners buried in operations", text: "Business owners buried in daily operations, follow-ups and manual work.", img: "/img/k-owners.jpg" },
+  { title: "Startups raising capital", text: "Startups preparing to raise funds, apply for grants or approach investors.", img: "/img/k-startups.jpg" },
+  { title: "Service businesses", text: "Clinics, gyms, studios, boutiques and food brands that want more leads and better conversion.", img: "/img/k-services-biz.jpg" },
 ];
 
 export const WHY = [
