@@ -44,7 +44,7 @@ export default function Services() {
 
   return (
     <>
-      <PageHero testid="services-hero" eyebrow="Services" img="/img/k-services.jpg"
+      <PageHero testid="services-hero" eyebrow="Services" img="/img/c-services.jpg"
         lines={["Growth consulting", <em key="s" className="italic text-mint">and AI automation</em>, "services."]}
         text="Grow With Hari offers three service tracks: Growth and Investor Readiness, AI Build and Automation, and the Founders Training Program. Each service has a chart with two lanes: what Grow With Hari does and what you do at every step, so you know exactly how you will work with us." />
       {TRACKS.map((t) => <TrackBlock key={t.id} track={t} />)}

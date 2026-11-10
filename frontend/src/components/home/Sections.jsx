@@ -65,7 +65,7 @@ export const WhyUs = () => (
           <SectionHead eyebrow="Why Grow With Hari" lines={["Strategy that", "ships as systems."]} text="Our promise is simple: strategy. growth. impact." />
           <Reveal delay={0.2} className="mt-10 hidden lg:block">
             <div className="relative aspect-[5/4] overflow-hidden rounded-[1.75rem] border border-line group">
-              <img src="/img/k-tea.jpg" alt="Munnar tea plantation terraces in the mist" className="img-tone h-full w-full object-cover" />
+              <img src="/img/c-tea.jpg" alt="Business consultant leading a strategy workshop" className="img-tone h-full w-full object-cover" />
             </div>
           </Reveal>
         </div>
