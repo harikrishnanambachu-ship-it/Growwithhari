@@ -1,20 +1,9 @@
-import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import { Compass, Layers, Rocket, LineChart, ArrowRight, Building2, User } from "lucide-react";
 import { EASE } from "@/components/site/Reveal";
+import { useAutoStep, StepPills } from "@/lib/useAutoStep";
 
 const ICONS = [Compass, Layers, Rocket, LineChart];
-
-const useAutoStep = (n) => {
-  const [active, setActive] = useState(0);
-  const [hold, setHold] = useState(false);
-  useEffect(() => {
-    if (hold) return undefined;
-    const t = setInterval(() => setActive((a) => (a + 1) % n), 2600);
-    return () => clearInterval(t);
-  }, [hold, n]);
-  return { active, setActive, setHold };
-};
 
 const StepNode = ({ s, i, active, onPick, id }) => {
   const Icon = ICONS[i % 4];
@@ -128,11 +117,7 @@ export const Swimlane = ({ chart, id }) => {
           <p className="font-mono text-[10px] uppercase tracking-[0.25em] text-mint">How you work with us</p>
           <p className="mt-2 font-display text-xl sm:text-3xl font-light leading-tight text-bone">{chart.title}</p>
         </div>
-        <div className="flex gap-1.5">
-          {chart.steps.map((s, i) => (
-            <span key={s} className={`h-1.5 rounded-full transition-[width,background-color] duration-500 ${i === active ? "w-8 bg-mint" : "w-3 bg-line"}`} />
-          ))}
-        </div>
+        <StepPills n={chart.steps.length} active={active} />
       </div>
       <div className="relative">
         <Desktop chart={chart} id={id} active={active} onPick={onPick} youLabel={youLabel} />

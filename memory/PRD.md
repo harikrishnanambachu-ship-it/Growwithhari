@@ -16,6 +16,7 @@ User choices: contact form saved to private inbox AND show email/phone; near-bla
 - Hari (owner) reading enquiries in the private inbox.
 
 ## Implemented (2026-11-10)
+- Glowing step-by-step animation extended to Process timeline, Onboarding + Process-setting cycles (icons, glowing arc, orbiting dot), Market lenses (active path pulse) and Positioning map (auto-tours quadrants). Shared hook: lib/useAutoStep.js.
 - Images switched to AI-generated Indian corporate professionals (no nature scenes); Services swimlane diagrams redesigned (auto-playing steps, icon nodes, glowing progress beam, handoff connectors, step summary bar).
 - All stock photos replaced with AI-generated Kerala-themed images (page heroes, who-we-help cards, tea terraces, backwater band).
 - Photos from the content PDF: Hari portraits (home hero arch, new "Meet the founder" home section, About hero + founder card) and team headshots (About team cards).

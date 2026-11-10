@@ -4,6 +4,10 @@ import { ProcessTimeline } from "@/components/diagrams/ProcessTimeline";
 import { CycleDiagram } from "@/components/diagrams/CycleDiagram";
 import { Marquee } from "@/components/site/Marquee";
 import { RECEIVE, ONBOARDING, NEEDS, CYCLE } from "@/lib/content";
+import { MessageCircle, PhoneCall, FileText, PenLine, Package, Flag, Map, SearchX, ListChecks, UserCheck, Bot, BarChart3 } from "lucide-react";
+
+const ONB_ICONS = [MessageCircle, PhoneCall, FileText, PenLine, Package, Flag];
+const CYCLE_ICONS = [Map, SearchX, ListChecks, UserCheck, Bot, BarChart3];
 
 export default function Process() {
   return (
@@ -30,7 +34,7 @@ export default function Process() {
       <Section testid="onboarding">
         <SectionHead eyebrow="Client onboarding" lines={["From first enquiry to kickoff", <em key="o" className="italic text-mint">in six clear steps.</em>]}
           text="New clients go from first enquiry to kickoff in six steps, starting with a free Growth Clarity Call. Nothing starts until scope and fees are agreed in an MOU." />
-        <Reveal className="mt-14"><CycleDiagram steps={ONBOARDING} id="onboarding" centerLabel="Step" loop={false} /></Reveal>
+        <Reveal className="mt-14"><CycleDiagram steps={ONBOARDING} icons={ONB_ICONS} id="onboarding" centerLabel="Step" loop={false} /></Reveal>
         <div className="mt-20 grid gap-12 lg:grid-cols-2">
           <SectionHead eyebrow="What we need from you" lines={["At onboarding."]} text="Once onboarded, you get a shared WhatsApp group with the Grow With Hari team for daily questions and updates." />
           <Checklist items={NEEDS} testid="needs-list" />
@@ -40,7 +44,7 @@ export default function Process() {
       <Section testid="process-setting" className="pb-32">
         <SectionHead eyebrow="Process-setting strategy" lines={["How we set up processes", <em key="s" className="italic text-mint">in your business.</em>]}
           text="We set up every business process in a six-step cycle: map it, find the gaps, standardise it, give it an owner, automate the repeat work and measure it every month." />
-        <Reveal className="mt-14"><CycleDiagram steps={CYCLE} id="process" centerLabel="Cycle" /></Reveal>
+        <Reveal className="mt-14"><CycleDiagram steps={CYCLE} icons={CYCLE_ICONS} id="process" centerLabel="Cycle" /></Reveal>
         <Reveal><p className="mt-10 max-w-3xl text-sm sm:text-base text-sage">The cycle repeats, so processes keep improving as the business grows instead of breaking under new volume. Typical processes we set up: lead handling, sales follow-up, order and delivery, customer support, hiring and onboarding, and monthly reporting.</p></Reveal>
       </Section>
     </>
